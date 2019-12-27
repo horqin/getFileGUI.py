@@ -15,6 +15,7 @@ import settings
 
 
 # @brief main function
+# @param func a function that return True if success, and False if failure
 def getFileGUI(func):
     app = QApplication(sys.argv)
     ex = MainWindow(func)

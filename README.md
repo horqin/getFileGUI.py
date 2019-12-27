@@ -13,6 +13,8 @@ from pathlib import Path
 from getFileGUI import getFileGUI
 
 
+# @brief print the selected file
+#        return True if success and False if failure
 def printFile(file):
     if file and Path(file).is_file():
         with open(file) as f:
