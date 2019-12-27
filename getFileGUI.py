@@ -3,8 +3,8 @@
 # @date 12/27/2019
 # @license GNU
 
-import os
 import sys
+from os import path
 from pathlib import Path
 
 from PyQt5.QtCore import Qt
@@ -31,7 +31,7 @@ class MainWindow(QWidget):
         self.getFileButton = None
         self.runButton = None
         self.file = None
-        self.fileDirectory = os.getenv('HOME')
+        self.fileDirectory = str(Path.home())
         self.func = func
         self.initUI()
 
@@ -67,9 +67,9 @@ class MainWindow(QWidget):
             options=(QFileDialog.Options() | QFileDialog.DontUseNativeDialog))
         if file and Path(file).is_file():
             self.file = file
-            self.fileDirectory = os.path.dirname(self.file)
+            self.fileDirectory = path.dirname(file)
         else:
-            self.fileDirectory = os.getenv('HOME')
+            self.fileDirectory = str(Path.home())
 
     def updateGetFileLineEditAction(self):
         self.fileLineEdit.setText(self.file)
