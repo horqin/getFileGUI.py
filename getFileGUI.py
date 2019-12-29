@@ -68,11 +68,11 @@ class MainWindow(QWidget):
         if file and Path(file).is_file():
             self.file = file
             self.fileDirectory = path.dirname(file)
+        # elif self.file and Path(self.file).is_file():
+        #     # do nothing
         elif not (self.file and Path(self.file).is_file()):
             self.file = None
             self.fileDirectory = str(Path.home())
-        # else:
-        #     # do nothing
 
     def updateGetFileLineEditAction(self):
         self.fileLineEdit.setText(self.file)
