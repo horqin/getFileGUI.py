@@ -1,6 +1,6 @@
 # @file getFileGUI.py
 # @author Tokhta Horqin <tokhta@outlook.com>
-# @date 12/27/2019
+# @date 12/29/2019
 # @license GNU
 
 import sys
@@ -23,7 +23,6 @@ def getFileGUI(func):
     sys.exit(app.exec_())
 
 
-# @brief set main window
 class MainWindow(QWidget):
     def __init__(self, func):
         super(QWidget, self).__init__()
