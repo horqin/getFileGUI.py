@@ -34,7 +34,7 @@ Run command `build.bat xxx.py`, such as `build.bat Demo.py`, under the root dire
 
 ## Depend
 
-It depends on Python3, PyInstaller, PyQt5.
+It depends on Python3, PyInstaller and PyQt5.
 
 ## Settings
 
